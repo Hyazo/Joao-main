@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
-Enemy::Enemy(Texture* CharacterTexture, int PosX, int PosY, int NumberOfFrames)
-	:Character::Character(CharacterTexture,PosX, PosY, NumberOfFrames)
+Enemy::Enemy(Texture* CharacterTexture, Vector2 Pos, int NumberOfFrames)
+	:Character::Character(CharacterTexture, Pos, NumberOfFrames)
 {
 
 }
@@ -14,9 +14,9 @@ void Enemy::Update(float DeltaTime)
 {
 	Character::Update(DeltaTime);
 
-	PositionX += 500 * DeltaTime;
+	Position.x += 50 * DeltaTime;
 }
 
-void Enemy::Input()
+void Enemy::ProcessInput(Input* UserInput)
 {
 }

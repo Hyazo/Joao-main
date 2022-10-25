@@ -17,7 +17,7 @@ public:
 	//update the animation on each frame
 	void Update(float DeltaTime);
 
-	void Draw(SDL_Renderer* Renderer, int PosX = 0, int PosY = 0, int Scale = 1);
+	void Draw(SDL_Renderer* Renderer, Vector2 Pos, int Scale = 1);
 
 	int GetFrameWidth() { return FrameWidth; }
 

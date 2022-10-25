@@ -4,10 +4,10 @@ class Player :
     public Character
 {
 public:
-    Player(Texture* CharacterTexture, int PosX, int PosY, int NumberOfFrames = 1);
+    Player(Texture* CharacterTexture, Vector2 Pos, int NumberOfFrames = 1);
     ~Player();
 
     void Update(float DeltaTime) override;
-    void Input() override;
+    void ProcessInput(Input* UserInput) override;
 };
 

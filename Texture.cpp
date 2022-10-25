@@ -58,10 +58,10 @@ bool Texture::LoadImageFromFile(const char* path, SDL_Renderer* renderer)
 	return SdlTexture != nullptr;
 }
 
-void Texture::Draw(SDL_Renderer* renderer, int x, int y, SDL_Rect* SourceRect, int Scale)
+void Texture::Draw(SDL_Renderer* renderer, Vector2 Pos, SDL_Rect* SourceRect, int Scale)
 {
 	// set the rendering space and render dimensions of the texture
-	SDL_Rect DestinationRect = { x, y, width, height };
+	SDL_Rect DestinationRect = { Pos.x, Pos.y, width, height };
 
 	// clip/crop the image if we have a source rect
 	if (SourceRect != nullptr) {

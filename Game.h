@@ -9,7 +9,8 @@ using namespace std;
 #include "GameObject.h"
 #include <iostream>
 #include <vector>
-
+#include "Input.h"
+#include"Collider.h"
 using namespace std;
 
 class Game
@@ -36,6 +37,11 @@ private:
 
     // initialize all GameObjects
     vector<GameObject*> GameObjects;
+
+    // all the colliders in the game will be sstored here
+    vector<Collider*> BoxColliders;
+
+    Input* UserInput;
 
 
 

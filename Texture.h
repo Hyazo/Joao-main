@@ -1,5 +1,5 @@
 #pragma once
-
+#include  "Vector2.h"
 #include <SDL.h>
 
 class Texture
@@ -25,7 +25,7 @@ public:
 	// param 1 - to copy the texture to the renderer
 	// param 2 & 3 - x and y position of the texture on the screen
 	// param 4 - the area we wans to copy from the texture onto the window
-	void Draw(SDL_Renderer* renderer, int x = 0, int y = 0, SDL_Rect* SourceRect = NULL, int Scale = 1);
+	void Draw(SDL_Renderer* renderer, Vector2 Pos, SDL_Rect* SourceRect = NULL, int Scale = 1);
 
 	// return the dimensions of the image
 	int GetImageWidth() { return width; }
